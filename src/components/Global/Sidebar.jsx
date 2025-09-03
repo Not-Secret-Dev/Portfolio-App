@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 import { FaHome } from "react-icons/fa";
 import { RiAccountCircleFill } from "react-icons/ri";
