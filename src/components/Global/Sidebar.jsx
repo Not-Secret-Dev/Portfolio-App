@@ -1,5 +1,5 @@
-import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
 import { RiAccountCircleFill } from "react-icons/ri";
 import { FaBookOpen } from "react-icons/fa";
@@ -13,6 +13,10 @@ const MainContainer = styled.div`
   margin: 20px;
   padding: 12px;
   color: #121417;
+
+  a {
+    color: #121417;
+  }
 `;
 
 const InfoContainer = styled.div`
@@ -33,7 +37,7 @@ const InfoContainer = styled.div`
   }
 
   p:last-child {
-    width: 80%;
+    width: 90%;
     font-size: 12px;
     color: #61708a;
     line-height: 24px;
@@ -50,12 +54,12 @@ const InfoContainer = styled.div`
 const Navlinks = styled.nav`
   margin-top: 8px;
 
-  li {
+  a {
     margin-top: 6px;
-    list-style: none;
+    text-decoration: none;
   }
 
-  li .content {
+  a .content {
     width: 100%;
     padding: 6px 0 6px 12px;
     display: flex;
@@ -65,7 +69,7 @@ const Navlinks = styled.nav`
     border-radius: 4px;
   }
 
-  li .content:hover {
+  a .content:hover {
     background-color: #dfdfdf;
     cursor: pointer;
   }
@@ -105,42 +109,42 @@ const Sidebar = () => {
         <p>Specializing in user-centered web and mobile applications</p>
       </InfoContainer>
       <Medialinks>
-        <div className="link">
+        <Link to="/" className="link">
           <FaLinkedin />
-        </div>
-        <div className="link">
+        </Link>
+        <Link to="/" className="link">
           <FaGithub />
-        </div>
-        <div className="link">
+        </Link>
+        <Link to="/" className="link">
           <AiFillInstagram />
-        </div>
+        </Link>
       </Medialinks>
       <Navlinks>
         <ul>
-          <li className="link">
-            <div className="content">
+          <Link to="/" className="link">
+            <div to="/" className="content">
               <FaHome />
               Home
             </div>
-          </li>
-          <li className="link">
+          </Link>
+          <Link to="/about" className="link">
             <div className="content">
               <RiAccountCircleFill />
               About
             </div>
-          </li>
-          <li className="link">
+          </Link>
+          <Link to="/projects" className="link">
             <div className="content">
               <FaBookOpen />
               Projects
             </div>
-          </li>
-          <li className="link">
+          </Link>
+          <Link to="/contact" className="link">
             <div className="content">
               <MdContactEmergency />
               Contact
             </div>
-          </li>
+          </Link>
         </ul>
       </Navlinks>
     </MainContainer>
