@@ -16,7 +16,7 @@ const Heading = styled.header`
 `;
 
 const ProjectCards = styled.div`
-  margin: 12px 23px;
+  margin: 12px auto;
 `;
 
 const Home = () => {

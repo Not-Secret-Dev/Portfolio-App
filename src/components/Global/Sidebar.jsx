@@ -15,10 +15,10 @@ const MainContainer = styled.div`
   transition: transform 0.3s ease-in-out;
   z-index: 1000;
   overflow-y: auto;
-  height: 100vh;
+  height: 92vh;
+  max-height: 100vh;
   position: sticky;
   top: 0;
-
   a {
     color: #121417;
   }
@@ -108,7 +108,6 @@ const InfoContainer = styled.div`
   p {
     font-size: 1.125rem;
     line-height: 1.75rem;
-    margin: 0.5rem 0;
     text-align: center;
   }
 
@@ -119,7 +118,7 @@ const InfoContainer = styled.div`
   }
 
   p:last-child {
-    width: 90%;
+    width: 100%;
     font-size: 0.75rem;
     color: #61708a;
     line-height: 1.5rem;
@@ -194,8 +193,6 @@ const Sidebar = () => {
     const handleResize = () => {
       const mobile = window.innerWidth <= 768;
       setIsMobile(mobile);
-
-      // Close sidebar when switching from mobile to desktop
       if (!mobile && isOpen) {
         setIsOpen(false);
       }

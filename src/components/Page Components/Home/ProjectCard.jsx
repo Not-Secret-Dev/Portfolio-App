@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Card = styled.div`
-  max-width: 100%;
+  max-width: 95%;
   padding: 1rem;
   display: flex;
   gap: 1.5rem;
@@ -53,6 +53,7 @@ const Card = styled.div`
     color: #61708a;
     line-height: 1.5;
     margin-bottom: 0.5rem;
+    text-align: justify;
   }
 
   .right .heading {
